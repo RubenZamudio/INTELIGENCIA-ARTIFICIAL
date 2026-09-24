@@ -1,0 +1,53 @@
+RESULTADOS PARA LOS DIFERENTES ALGORITMOS:
+
+Puzzle 8 git:(main) ✗  cd /Users/rubenzamudio/Desktop/IA/Puzzle\ 8 ; /usr/bin/env /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -XX:+ShowCodeDetailsInExceptionMessages -cp /Users/
+rubenzamudio/Library/Application\ Support/Code/User/workspaceStorage/1be7f38a139afc8c9bbcd6cd420818cf/redhat.java/jdt_ws/Puzzle\ 8_6be50954/bin com.ejemplo.App 
+1  2  5
+3  4   
+6  7  8
+
+
+Búsqueda en anchura (BFS)
+Profundidad de la meta: 21
+Nodos evaluados: 76930
+Nodos generados: 97195
+Máximo de nodos en memoria: 117461
+Tiempo real: 0.041 segundos
+
+Búsqueda en profundidad (DFS)
+Profundidad de la meta: 5293
+Nodos evaluados: 5907
+Nodos generados: 10610
+Máximo de nodos en memoria: 15313
+Tiempo real: 0.007 segundos
+
+Búsqueda de costo uniforme (UCS)
+Profundidad de la meta: 21
+Nodos evaluados: 71758
+Nodos generados: 93665
+Máximo de nodos en memoria: 115572
+Tiempo real: 0.044 segundos
+Costo de la solución: 21
+
+Búsqueda iterativa limitada (IDS)
+Profundidad de la meta: 29
+Nodos evaluados: 186509
+Nodos generados: 186529
+Máximo de nodos en memoria: 26065
+Tiempo real: 0.051 segundos
+Límite de profundidad donde se encontró: 29
+
+Tabla comparativa
+
+| Característica                        | BFS (Anchura) | DFS (Profundidad) | UCS (Costo uniforme) | IDS (Iterativa limitada) |
+| ------------------------------------- | ------------: | ----------------: | -------------------: | -----------------------: |
+| **Profundidad de la meta**            |            21 |              5293 |                   21 |                       29 |
+| **Nodos evaluados**                   |        76,930 |             5,907 |               71,758 |                  186,509 |
+| **Nodos generados**                   |        97,195 |            10,610 |               93,665 |                  186,529 |
+| **Máximo de nodos en memoria**        |       117,461 |            15,313 |              115,572 |                   26,065 |
+| **Tiempo real**                       |       0.041 s |       **0.007 s** |              0.044 s |                  0.051 s |
+
+BFS encontró la solución a una profundidad de 21, pero necesitó almacenar hasta 117,461 nodos, por lo que tiene un consumo de memoria alto.
+DFS fue el algoritmo más rápido (0.007 s) y evaluó menos nodos, pero encontró una solución extremadamente profunda, de 5293 movimientos, por lo que la solución no es eficiente.
+UCS encontró una solución de profundidad y costo 21, similar a BFS. Evaluó ligeramente menos nodos que BFS, aunque su tiempo fue un poco mayor.
+IDS utilizó considerablemente menos memoria que BFS y UCS, pero fue el que más nodos evaluó y generó, encontrando la solución en profundidad 29.
